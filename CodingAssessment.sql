@@ -81,9 +81,6 @@ alter table Pets add ShelterID int foreign key (ShelterID) references Shelters(S
 alter table AdoptionEvents add ShelterID int foreign key (ShelterID) references Shelters(ShelterID) on delete cascade
 alter table Pets add AdopterID int foreign key (AdopterID) references Participants(ParticipantID)
 
---4
-if exists (select * from sys.databases where name = 'PETDB') print 'Database already exists'
-
 /*5. Write an SQL query that retrieves a list of available pets (those marked as available for adoption) from the "Pets" table. 
 Include the pet's name, age, breed, and type in the result set. 
 Ensure that the query filters out pets that are not available for adoption.*/
